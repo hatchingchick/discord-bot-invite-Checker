@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("https://ramune-material.com/wp-content/uploads/2022/03/cyber-circle_A_01-940x529.png");
+        background-size: cover;
+      }
+
+      .discord-button {
+        background-color: #7289da;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="bot-id" placeholder="Enter Bot ID">
+    <button id="generate-button">Generate Link</button>
+    <br>
+    <br>
+    <a id="discord-link" class="discord-button" target="_blank">Invite Bot</a>
+
+    <script>
+      document.getElementById("generate-button").addEventListener("click", function() {
+        const botId = document.getElementById("bot-id").value;
+        const link = `https://discord.com/api/oauth2/authorize?client_id=${botId}&permissions=0&scope=bot`;
+        document.getElementById("discord-link").href = link;
+      });
+    </script>
+  </body>
+</html>
