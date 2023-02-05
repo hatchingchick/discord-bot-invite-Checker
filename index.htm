@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <h1><font color="white">discord-bot-invite-Checker</font></h1>
+    <h1><font color="white">discord bot invite Checker</font></h1>
     <style>
+      .permission-checkbox-container { color: #536eb9; }
       body {
+        flex-direction: column;
         background-image: url("https://ramune-material.com/wp-content/uploads/2022/03/cyber-circle_A_01-940x529.png");
         background-size: cover;
         display: flex;
@@ -13,7 +15,7 @@
       }
 
       .discord-button {
-        background-color: #7289da;
+        background-color: #85a104;
         color: white;
         padding: 20px 40px;
         border-radius: 10px;
@@ -25,6 +27,7 @@
       }
 
       input[type="text"] {
+
         padding: 10px 20px;
         font-size: 20px;
         border-radius: 10px;
@@ -46,14 +49,20 @@
         margin-right: 10px;
         color: white;
       }
-    
+      .flex {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
     </style>
   </head>
   <body>
-    <div>
+    <div class="flex">
+
    <input type="text" id="bot-id" placeholder="Enter Bot ID">
    <br>
+   <div class="permission-checkbox-container">
 <input type="checkbox" class="permission-checkbox" id="admin" value="8">Admin
 <input type="checkbox" class="permission-checkbox" id="kick_members" value="2">Kick Members
 <input type="checkbox" class="permission-checkbox" id="ban_members" value="4">Ban Members
@@ -78,11 +87,12 @@
 <input type="checkbox" class="permission-checkbox" id="move_members" value="16777216">Move Members
 <input type="checkbox" class="permission-checkbox" id="use_voice_activity" value="16384">Use Voice Activity
 <br>
+</div>
       <br>
-      <button id="generate-button">Generate Link</button>
+      <button id="generate-button">①Generate Link</button>
       <br>
       <br>
-      <a id="discord-link" class="discord-button" target="_blank">Invite Bot</a>
+      <a id="discord-link" class="discord-button" target="_blank">②Invite Bot link</a>
     </div>
     <script>
       document.getElementById("generate-button").addEventListener("click", function() {
