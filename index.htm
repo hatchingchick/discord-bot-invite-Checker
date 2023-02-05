@@ -91,7 +91,7 @@
         const checkboxes = document.querySelectorAll('.permission-checkbox');
         checkboxes.forEach(checkbox => {
           if (checkbox.checked) {
-            permissions += parseInt(checkbox.value);
+            permissions |= parseInt(checkbox.value);
           }
         });
         const link = `https://discord.com/api/oauth2/authorize?client_id=${botId}&permissions=${permissions}&scope=bot`;
