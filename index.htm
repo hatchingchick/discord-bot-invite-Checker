@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Discord Bot Invite Checker</title>
     <style>
       body {
         background-image: url("https://ramune-material.com/wp-content/uploads/2022/03/cyber-circle_A_01-940x529.png");
         background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
       .discord-button {
         background-color: #7289da;
         color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
+        padding: 20px 40px;
+        border-radius: 10px;
         text-decoration: none;
         font-weight: bold;
         display: inline-block;
         margin-top: 50px;
+        font-size: 20px;
+      }
+
+      input[type="text"] {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #0f236b;
+        color: white;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <input type="text" id="bot-id" placeholder="Enter Bot ID">
-    <button id="generate-button">Generate Link</button>
-    <br>
-    <br>
-    <a id="discord-link" class="discord-button" target="_blank">Invite Bot</a>
+    <div>
+      <input type="text" id="bot-id" placeholder="Enter Bot ID">
+      <button id="generate-button">Generate Link</button>
+      <br>
+      <br>
+      <a id="discord-link" class="discord-button" target="_blank">Invite Bot</a>
+    </div>
 
     <script>
       document.getElementById("generate-button").addEventListener("click", function() {
